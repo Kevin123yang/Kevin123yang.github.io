@@ -1,0 +1,184 @@
+:root {
+  --bg-dark:#231c1a;
+  --accent:#ff7a00;
+  --text:#fff;
+  --muted:#d0d0d0;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family: Montserrat, system-ui, -apple-system, Arial, sans-serif;
+  color:var(--text);
+}
+
+/* ===== Header Navigation ===== */
+header {
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(35,28,26,.6);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  z-index:10;
+}
+
+nav ul {
+  display:flex;
+  gap:28px;
+  list-style:none;
+}
+
+nav a {
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:.15em;
+  font-weight:600;
+  font-size:14px;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: relative;
+  background: #000 url("hero.jpg") center/cover no-repeat fixed;
+}
+
+.hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.35);
+}
+
+.hero-inner {
+  position: relative;
+  z-index:1;
+  padding: 0 24px;
+  max-width: 1000px;
+}
+
+.eyebrow {
+  font-size:12px;
+  letter-spacing:.25em;
+  color:var(--muted);
+  margin-bottom:36px;
+}
+
+.hero h1 {
+  font-weight: 800;
+  font-size: clamp(40px, 8vw, 88px);
+  line-height: 1.05;
+  text-shadow: 0 10px 30px rgba(0,0,0,.35);
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  color:#eaeaea;
+  font-size: clamp(14px, 2.6vw, 20px);
+  margin-bottom: 28px;
+}
+
+.subtitle em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+/* ===== Social Icons ===== */
+.social {
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  margin-top:22px;
+}
+
+.social a {
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:50%;
+  text-decoration:none;
+  color:#fff;
+  transition: transform .15s, background .15s, border-color .15s;
+}
+
+.social a:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.1);
+  border-color:#fff;
+}
+
+/* ===== Scroll Down Arrow ===== */
+.scroll-down {
+  position: absolute;
+  left:50%;
+  bottom:28px;
+  transform: translateX(-50%);
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);
+  display:grid;
+  place-items:center;
+  color:#fff;
+  text-decoration:none;
+  animation: float 2.2s ease-in-out infinite;
+  z-index:1;
+}
+
+@keyframes float {
+  0%,100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -8px); }
+}
+
+/* ===== General Sections ===== */
+section {
+  padding: 80px 20px;
+  color:#222;
+  background:#fff;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size:28px;
+  font-weight:800;
+  color:#111;
+  margin-bottom:16px;
+}
+
+/* Anchor offset for fixed header */
+:target {
+  scroll-margin-top: 80px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  header { height: 56px; }
+  nav ul { gap:16px; }
+}
