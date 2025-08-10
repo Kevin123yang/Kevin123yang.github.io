@@ -1,97 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Yang - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .project {
-            background: #fff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #333;
-            color: #fff;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kevin Yang — Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome (icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Kevin Yang</h1>
+  <header>
     <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a Computer Science graduate passionate about backend development, web technologies, and problem-solving. 
-       I enjoy building projects that combine functionality and clean design.</p>
-</section>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Hi there, thanks for visiting my own website!</div>
+      <h1>Kevin&nbsp;Yang</h1>
+      <p class="subtitle"> <em>looking for opportunities</em></p>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>MMO Maze Game</h3>
-        <p>Developed a real-time multiplayer maze game using Flask, Flask-SocketIO, MongoDB, and JavaScript (HTML5 Canvas, Socket.IO) 
-           for maze generation and player movement.</p>
-        <a href="https://github.com/Beitatata/CSE312-Team-Project" target="_blank">View on GitHub</a>
+      <div class="social">
+        <a href="https://github.com/Kevin123yang" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/wenkai-yang-6129a0341/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:wenkaiya@buffalo.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
     </div>
-    <div class="project">
-        <h3>Machine Learning Classifier</h3>
-        <p>Implemented logistic regression and SVM models using Python (NumPy, scikit-learn) to classify datasets and analyze accuracy performance.</p>
+    <a class="scroll-down" href="#about" aria-label="Scroll Down"><i class="fa-solid fa-chevron-down"></i></a>
+  </section>
+
+  <!-- Sections -->
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>Will fill out soon</p>
     </div>
-</section>
+  </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">wenkaiya@buffalo.edu</a></p>
-    <p>GitHub: <a href="https://github.com/Kevin123yang" target="_blank">Kevin123yang</a></p>
-</section>
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p>Projects will be listed soon...</p>
+    </div>
+  </section>
 
-<footer>
-    <p>© 2025 Kevin Yang.</p>
-</footer>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: wenkai.yang@buffalo.edu</p>
+    </div>
+  </section>
 
 </body>
 </html>
